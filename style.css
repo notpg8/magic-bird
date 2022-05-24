@@ -1,0 +1,37 @@
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	word-wrap: break-word;
+	font-size: 3vw;
+	background-color: black;
+}
+
+.content-wrapper {
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	height: 100vh;
+	max-width: 80vw;
+	background-color: white;
+}
+
+.answer {
+	text-align: center;
+	margin: 0 5vw;
+	width: 100%;
+}
+
+.answer:hover {
+	color: rgb(14, 144, 243);
+	cursor: pointer;
+}
+
+.bird-image {
+	margin-right: -20vw;
+	width: 50vw;
+	max-width: 400px;
+}
+
+button {
+	background-color: none;
+}
