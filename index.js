@@ -20,7 +20,9 @@ const answers = [
 	`Rephrase your question`,
 ]
 
-const birdImage = document.querySelector('.bird-image')
+const birdImage1 = document.querySelector('.bird-image-1')
+const birdImage2 = document.querySelector('.bird-image-2')
+
 const answerText = document.querySelector('.answer-text')
 const answerButton = document.querySelector('.answer-button')
 
@@ -40,15 +42,18 @@ const birdAnswer = () => {
 	answerButton.removeEventListener('click', birdAnswer)
 	const intervalID = setInterval(() => {
 		if (randomAmountOfMs() > 170) {
-			birdImage.src = './media/400x bird talking.png'
+			birdImage2.style.visibility = 'visible'
+			birdImage1.style.visibility = 'hidden'
 		} else {
-			birdImage.src = './media/400x bird.png'
+			birdImage1.style.visibility = 'visible'
+			birdImage2.style.visibility = 'hidden'
 		}
 	}, 100)
 
 	setTimeout(() => {
 		window.clearInterval(intervalID)
-		birdImage.src = './media/400x bird.png'
+		birdImage2.style.visibility = 'hidden'
+		birdImage1.style.visibility = 'visible'
 		setTimeout(() => {
 			answerButton.classList = 'answer-button'
 			answerButton.innerHTML = 'Ask the magic bird'

@@ -26,10 +26,21 @@ body {
 	cursor: pointer;
 }
 
-.bird-image {
+.bird {
 	margin-right: -10vw;
 	width: 40vw;
 	max-width: 400px;
+	display: grid;
+	grid-template-areas: 'overlayBird';
+}
+
+.bird-image-1 {
+	grid-area: overlayBird;
+}
+
+.bird-image-2 {
+	grid-area: overlayBird;
+	visibility: hidden;
 }
 
 button {
